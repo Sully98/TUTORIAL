@@ -1,0 +1,13 @@
+# The purpose of this exercise is to perform basic plotting of PDFs from the LHAPDF files
+
+# Take an output PDF from a previous exercise:
+cp -r ../exercise1/output .
+
+# Start the jupyter notebook:
+jupyter notebook
+
+# In the browser, select new -> Python2
+
+# Cut and paste from testPlot.py into the browser
+
+# Execute commands with Alt+Enter

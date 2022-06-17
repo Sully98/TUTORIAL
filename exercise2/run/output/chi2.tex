@@ -1,0 +1,45 @@
+\documentclass[14pt]{report}
+\usepackage{extsizes}
+\usepackage[paperwidth=21cm,paperheight=21cm,left=0.2cm,right=0.2cm,top=0.5cm,bottom=0.5cm]{geometry}
+\usepackage{pxfonts}
+\pagestyle{empty}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[table]{xcolor}
+\definecolor{lightgray}{gray}{0.87}
+\begin{document}
+\begin{table}
+  \begin{center}
+  \rowcolors{2}{lightgray}{}
+  \resizebox*{\textwidth}{!}{
+    \begin{tabular}{lp{2.57cm}}
+      \toprule
+  Dataset     & output  \\ 
+      \midrule
+  H1 inclusive jet 99-00 data & 12 / 24  \\ 
+  H1 low Q2 inclusive jet 99-00 data & 18 / 28  \\ 
+  HERA1+2 CCep & 48 / 39  \\ 
+  HERA1+2 CCem & 63 / 42  \\ 
+  HERA1+2 NCem & 240 / 159  \\ 
+  HERA1+2 NCep 820 & 84 / 70  \\ 
+  HERA1+2 NCep 920 & 595 / 377  \\ 
+  HERA1+2 NCep 460 & 219 / 204  \\ 
+  HERA1+2 NCep 575 & 222 / 254  \\ 
+  H1 normalised inclusive jets with unfolding & 0 / 24  \\ 
+  H1 normalised dijets with unfolding & 0 / 24  \\ 
+  H1 normalised trijets with unfolding & 0 / 16  \\ 
+  Correlated $\chi^2$  & 134  \\ 
+  Log penalty $\chi^2$  & -8.15  \\ 
+  \rowcolor{white}
+      \midrule
+  Total $\chi^2$ / dof  & 1715 / 1246  \\ 
+  \rowcolor{white}
+      \midrule
+  $\chi^2$ p-value  & 0.00   \\ 
+      \bottomrule
+    \end{tabular}
+  }
+  \end{center}
+\end{table}
+
+\end{document}

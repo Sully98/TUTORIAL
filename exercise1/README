@@ -1,0 +1,21 @@
+# The purpose of this exercise is to perform a PDF fit to the HERA I+II DIS data.
+# We will review the most important important options of the PDF fit, mention 
+# different techniques to estimate PDF uncerainties, and show
+# how to visualise the results of the fit.
+
+# Possible options to try: 
+# - order LO NLO NNLO
+# - Different HF scheme
+# - Different PDF parametrisations
+# - Different starting scales Q02
+
+# Run xFitter:
+mkdir run
+ln -s ~/xfitter/xfitter-1.2.2/datafiles/ run/datafiles
+cp input/*.txt run
+cd run
+xfitter
+
+# Visualize results:
+xfitter-draw output
+evince output/plots.pdf

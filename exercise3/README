@@ -1,0 +1,23 @@
+# The purpose of this exercise is to perform a PDF Hessian profiling
+# of the CT14nlo PDF to the Tevatron W asymmetry data
+
+# Run xFitter:
+mkdir run
+ln -s ~/xfitter/xfitter-1.2.2/datafiles/ run/datafiles
+cp input/*.txt run
+cd run
+xfitter
+
+# Move the results into the main directory:
+cd ..
+cp -r run/output .
+
+# Visualize results:
+xfitter-draw output:CT14nlo profile:output:CT14nlo-profiled --asym --bands --therr
+evince plots/plots.pdf
+
+# Produce a new PDF in lhapdf6 format:
+xfitter-process profile output/pdf_shifts.dat output/pdf_rotate.dat ../pdfsets/CT14nlo/ CT14nlo-TEVW
+
+# Save the new PDF set into our lhapdf6 collection:
+cp -r CT14nlo-TEVW/ ../pdfsets/

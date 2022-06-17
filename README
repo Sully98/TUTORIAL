@@ -1,0 +1,7 @@
+# exercises in exercise1/ exercise2/ exercise3/ exercise4/ exercise5/
+
+# documentation in doc/manual.pdf and doc/README
+
+# additional PDF set from LHAPDF can be installed in pdfset/
+# to use them do:
+export LHAPATH=`pwd`/pdfsets:$LHAPATH

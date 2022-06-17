@@ -1,0 +1,31 @@
+# The purpose of this exercise is to test the equivalence of two chi2 representations:
+# one based on nuisance parameters and the other on covariance or correlation matrices
+
+# The first dataset has a covariance matrix provided,
+# we test the conversion to nuisance parameter representation
+diff input1-cov input1-nui
+
+# Run the chi2 test in xFitter:
+ln -s ~/xfitter/xfitter-1.2.2/datafiles/ input1-cov/datafiles
+ln -s ~/xfitter/xfitter-1.2.2/datafiles/ input1-nui/datafiles
+cd input1-cov && xfitter && cd ..
+cd input1-nui && xfitter && cd ..
+
+# Compare results:
+xfitter-draw input1-cov/output:covariance input1-nui/output:nuisance --outdir plots1
+evince plots1/plots.pdf
+
+
+# The second dataset has nuisance parameters provided in the form of systematic uncertainties,
+# we test the conversion to covariance matrix representation
+diff input2-nui input2-cov
+
+# Run the chi2 test in xFitter:
+ln -s ~/xfitter/xfitter-1.2.2/datafiles/ input2-nui/datafiles
+ln -s ~/xfitter/xfitter-1.2.2/datafiles/ input2-cov/datafiles
+cd input2-nui && xfitter && cd ..
+cd input2-cov && xfitter && cd ..
+
+# Compare results:
+xfitter-draw input2-nui/output:nuisance input2-cov/output:covariance --outdir plots2
+evince plots2/plots.pdf

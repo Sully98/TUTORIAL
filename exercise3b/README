@@ -1,0 +1,17 @@
+# The purpose of this exercise is to perform a PDF profiling to the ATLAS W and Z inclusive data.
+
+# to start:
+
+mkdir run
+ln -s ~/xfitter/xfitter-1.2.2/datafiles/ run/datafiles
+cp input/*.txt run
+cd run
+xfitter
+
+# move the results into the main directory
+cd ..
+cp -r run/output .
+
+# to visualize results
+xfitter-draw output:CT10nnlo profile:output:CT10nnlo-profiled --asym --bands --therr
+evince plots/plots.pdf

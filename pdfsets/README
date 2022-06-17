@@ -1,0 +1,9 @@
+# to install some additional PDF set from lhapdf do
+
+lhapdf --pdfdir=./ install CT14nlo
+lhapdf --pdfdir=./ install CT10nnlo
+lhapdf --pdfdir=./ install NNPDF30_nlo_as_0118
+
+# to update the list of PDFs do
+wget http://www.hepforge.org/archive/lhapdf/pdfsets/6.1/pdfsets.index
+sudo cp pdfsets.index /opt/hep/share/LHAPDF

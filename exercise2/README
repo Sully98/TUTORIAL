@@ -1,0 +1,13 @@
+# The purpose of this exercise is to perform a simultaneous 
+# PDF and alphas(mZ) fit of the HERA I+II inclusive and jets DIS data.
+
+# Run xFitter:
+mkdir run
+ln -s ~/xfitter/xfitter-1.2.2/datafiles/ run/datafiles
+cp input/*.txt run
+cd run
+xfitter
+
+# Visualize results:
+xfitter-draw output
+evince output/plots.pdf
