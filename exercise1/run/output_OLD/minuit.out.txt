@@ -68,3 +68,24 @@
  **********
  **    3 **CALL FCN    3.000    
  **********
+ **********
+ **    4 **MIGRAD    2000.    
+ **********
+ START MIGRAD MINIMIZATION.  STRATEGY 2.  CONVERGENCE WHEN EDM .LT. 0.10E-03
+ EIGENVALUES OF SECOND-DERIVATIVE MATRIX:
+        -0.2421E-01  0.7583E-02  0.1142E-01  0.1610E-01  0.2322E-01  0.3562E-01
+         0.4667E-01  0.8071E-01  0.1101E+00  0.4400E+00  0.1038E+01  0.1532E+01
+         0.2937E+01  0.7745E+01
+ MINUIT WARNING IN HESSE   
+ ============== MATRIX FORCED POS-DEF BY ADDING  0.31953E-01 TO DIAGONAL.
+
+ FCN=   1363.399     FROM HESSE     STATUS=NOT POSDEF   176 CALLS      178 TOTAL
+                     EDM=  0.98E-02    STRATEGY= 2      ERR MATRIX NOT POS-DEF
+
+  EXT PARAMETER                APPROXIMATE        STEP         FIRST   
+  NO.   NAME        VALUE          ERROR          SIZE      DERIVATIVE 
+   1   Adbar       0.16130       0.38417E-02   0.90044E-03    50.017    
+   2   Adv          1.0000       constant   
+   3   Ag           1.0000       constant   
+   4   Agp         0.73110E-01   0.16218E-01   0.11663E-02   -65.642    
+   5   Aubar        0.0000       constant   

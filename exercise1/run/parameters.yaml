@@ -4,9 +4,9 @@ MINUIT:
     call fcn 1
     set str 2
     call fcn 3
-    migrad 2000
-    hesse
-    call fcn 3
+#    migrad 2000
+#    hesse
+#    call fcn 3
     
 #  doErrors :  Hesse # None
 
